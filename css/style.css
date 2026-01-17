@@ -1,0 +1,218 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===============================
+   BACKGROUND LOGO WATERMARK
+   (VISIBLE ON ALL PAGES)
+================================ */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000px;
+  opacity: 0.50;          /* adjust if needed: 0.05–0.15 */
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* ===============================
+   BODY
+================================ */
+body {
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  color: #333;
+  background-color: #f4f6f8;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.top-header {
+  background: #0b7dda;
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #0b7dda;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background: #e9f3fb;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(233, 243, 251, 0.9);
+  opacity: 0.80; 
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 15px;
+  background: #0b7dda;
+  color: #ffffff;
+  padding: 12px 22px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* ===============================
+   FEATURES & SERVICES
+================================ */
+.features,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   CONTENT SECTIONS
+================================ */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  opacity: 0.80; 
+}
+
+/* ===============================
+   WHATSAPP BUTTON
+================================ */
+.btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ===============================
+   APPOINTMENTS PAGE
+================================ */
+.appointment-section {
+  padding: 40px 20px;
+}
+
+.appointment-card {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  opacity: 0.90;  
+}
+
+.appointment-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0b7dda;
+}
+
+.appointment-card input,
+.appointment-card select,
+.appointment-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.appointment-card textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.appointment-card button {
+  width: 100%;
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.appointment-card button:hover {
+  background: #1ebe5d;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0b7dda;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+@media (max-width: 600px) {
+  html::before {
+    background-size: 240px;
+  }
+
+  .top-header h1 {
+    font-size: 22px;
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+}
+.map-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
